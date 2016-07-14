@@ -50,17 +50,20 @@
 				scene.add(object);
 			}, onProgress, onError );
 			
+			
 			scene.add( light );
 			
 			
 			function render() {
 				requestAnimationFrame( render );
-				
+				cube.rotation.x += 0.1;
+				cube.rotation.y += 0.1;
+				   var rotSpeed = 0.004;
 				if (OBJLoaded) 
 				{ 
-					//OBJLoaded.rotate.x -= rotSpeed;
-					//OBJLoaded.rotate.y -= rotSpeed;
-					//OBJLoaded.rotate.z -= rotSpeed;
+					OBJLoaded.translateX -= rotSpeed;
+					OBJLoaded.translateY -= rotSpeed;
+					OBJLoaded.translateZ -= rotSpeed;
 					
 						
 				}
